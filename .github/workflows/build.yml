@@ -18,6 +18,9 @@ jobs:
       with:
         node-version: '14'
 
+    - name: Disable Husky
+      run: npm config set scripts-prepend-node-path auto && npm config set skip-optional true
+
     - name: Install dependencies
       run: npm install
 
